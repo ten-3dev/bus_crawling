@@ -9,7 +9,7 @@ const ViewScreen = ({route}) => {
 
     const getBusData = async (bsNm, wincId) => {
         context.setLoading(true);
-        const busData = await axios.get(`http://101.101.211.131:3000/?bus_name=${bsNm}&bus_id=${wincId}`);
+        const busData = await axios.get(`http://0.0.0.0:8000/?bus_name=${bsNm}&bus_id=${wincId}`);
         setData(busData.data);
         context.setLoading(false);
     }
